@@ -1,31 +1,3 @@
-<script setup lang="ts">
-  import Navbar from '@/components/Navbar.vue'
-  import Container from '@/components/Container.vue'
-
-  const itemList = [
-    {
-      text: 'UUID',
-      href: '/uuid'
-    },
-    {
-      text: 'Base64',
-      href: '/base64'
-    },
-    {
-      text: '驼峰蛇形',
-      href: '/camel'
-    },
-    {
-      text: 'Crontab',
-      href: '/crontab'
-    },
-    {
-      text: '正则表达式',
-      href: 'https://regex101.com/'
-    }
-  ]
-</script>
-
 <template>
   <Navbar>
     <!-- Hero -->
@@ -72,4 +44,30 @@
   </Container>
 </template>
 
-<style scoped></style>
+<script setup lang="ts">
+  import Navbar from '@/components/Navbar.vue'
+  import Container from '@/components/Container.vue'
+
+  const itemList = [
+    {
+      text: 'UUID',
+      href: '/uuid'
+    },
+    {
+      text: 'Base64',
+      href: '/base64'
+    },
+    {
+      text: '驼峰蛇形',
+      href: '/camel'
+    },
+    {
+      text: 'Crontab',
+      href: '/crontab'
+    },
+    {
+      text: '正则表达式',
+      href: 'https://regex101.com/'
+    }
+  ]
+</script>

@@ -1,14 +1,3 @@
-<script setup lang="ts">
-  defineProps({
-    value: {
-      type: String
-    },
-    rows: {
-      type: String
-    }
-  })
-</script>
-
 <template>
   <textarea
     :value="value"
@@ -23,4 +12,9 @@
   ></textarea>
 </template>
 
-<style scoped></style>
+<script lang="ts" setup>
+  defineProps({
+    value: String,
+    rows: String
+  })
+</script>

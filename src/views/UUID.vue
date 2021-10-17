@@ -1,14 +1,3 @@
-<script setup lang="ts">
-  import Navbar from '@/components/Navbar.vue'
-  import Container from '@/components/Container.vue'
-  import ColumnLabel from '@/components/ColumnLabel.vue'
-  import ToolHead from '@/components/tool/ToolHead.vue'
-  import ToolDesc from '@/components/tool/ToolDesc.vue'
-  import { DuplicateIcon } from '@heroicons/vue/outline'
-  import Button from '@/components/Button.vue'
-  import Textarea from '@/components/input/Textarea.vue'
-</script>
-
 <template>
   <Navbar />
   <Container>
@@ -87,7 +76,9 @@
               placeholder=""
             />
           </div>
+
           <Button class="ml-2">
+            <!-- <RefreshIcon class="h-4 w-4 mr-1" /> -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-4 w-4 mr-1"
@@ -105,10 +96,19 @@
             刷 新</Button
           >
         </div>
-        <Textarea rows="10" />
+        <Textarea rows="11" />
       </div>
     </div>
   </Container>
 </template>
 
-<style scoped></style>
+<script lang="ts" setup>
+  import Navbar from '@/components/Navbar.vue'
+  import Container from '@/components/Container.vue'
+  import ColumnLabel from '@/components/ColumnLabel.vue'
+  import ToolHead from '@/components/tool/ToolHead.vue'
+  import ToolDesc from '@/components/tool/ToolDesc.vue'
+  import Button from '@/components/Button.vue'
+  import Textarea from '@/components/input/Textarea.vue'
+  // import { RefreshIcon } from '@heroicons/vue/outline'
+</script>
