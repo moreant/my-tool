@@ -2,6 +2,7 @@
   import { ref, watch } from 'vue'
   import Navbar from '@/components/Navbar.vue'
   import Container from '@/components/Container.vue'
+  import ToolHead from '@/components/tool/ToolHead.vue'
   import Textarea from '@/components/input/Textarea.vue'
 
   const exampleJson = [
@@ -45,6 +46,7 @@
 <template>
   <Navbar />
   <Container>
+    <ToolHead title="Kv2Note" subtitle="将 KV 格式的 Json 数组转为单行注释" />
     <Textarea v-model:value="inputValue" :rows="10" />
     {{ result }}
   </Container>
