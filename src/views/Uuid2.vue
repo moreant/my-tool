@@ -1,3 +1,15 @@
+
+<script lang="ts" setup>
+  import Navbar from '@/components/Navbar.vue'
+  import Container from '@/components/Container.vue'
+  import ColumnLabel from '@/components/ColumnLabel.vue'
+  import ToolHead from '@/components/tool/ToolHead.vue'
+  import ToolDesc from '@/components/tool/ToolDesc.vue'
+  import Button from '@/components/Button.vue'
+  import Textarea from '@/components/input/Textarea.vue'
+  // import { RefreshIcon } from '@heroicons/vue/outline'
+</script>
+
 <template>
   <Navbar />
   <Container>
@@ -101,14 +113,3 @@
     </div>
   </Container>
 </template>
-
-<script lang="ts" setup>
-  import Navbar from '@/components/Navbar.vue'
-  import Container from '@/components/Container.vue'
-  import ColumnLabel from '@/components/ColumnLabel.vue'
-  import ToolHead from '@/components/tool/ToolHead.vue'
-  import ToolDesc from '@/components/tool/ToolDesc.vue'
-  import Button from '@/components/Button.vue'
-  import Textarea from '@/components/input/Textarea.vue'
-  // import { RefreshIcon } from '@heroicons/vue/outline'
-</script>

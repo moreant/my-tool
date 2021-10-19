@@ -1,3 +1,7 @@
+<script setup lang="ts"></script>
+
+<style scoped></style>
+
 <template>
   <button
     class="
@@ -17,7 +21,3 @@
     <div class="flex items-center justify-center"><slot /></div>
   </button>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>
