@@ -15,7 +15,7 @@
     }
   ]
 
-  const parseJson = (val: string) => {
+  const parseJson = (val: string): string => {
     try {
       const jsonArr = JSON.parse(val)
       return jsonArr
@@ -37,7 +37,9 @@
     value: string
   }
 
-  watch(inputValue, (val) => parseJson(val))
+  watch(inputValue, (val) => {
+    result.value = parseJson(val)
+  })
 </script>
 
 <template>
