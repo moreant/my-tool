@@ -3,7 +3,7 @@
 
   const props = defineProps<{
     value?: string
-    rows?: number
+    rows?: string
   }>()
 
   const emit = defineEmits(['update:value'])
