@@ -19,6 +19,10 @@
       text: 'Crontab',
       href: '/crontab'
     },
+     {
+      text: 'Kv2Note',
+      href: '/kv2note'
+    },
     {
       text: '正则表达式',
       href: 'https://regex101.com/'

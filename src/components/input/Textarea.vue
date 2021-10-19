@@ -1,13 +1,23 @@
 <script lang="ts" setup>
-  defineProps({
-    value: String,
-    rows: String
-  })
+  import { ref, watchEffect } from 'vue'
+
+  const props = defineProps<{
+    value?: string
+    rows?: number
+  }>()
+
+  const emit = defineEmits(['update:value'])
+
+  const currentValue = ref(props.value)
+
+  watchEffect(() => emit('update:value', currentValue.value))
+  // 亦可这样
+  // const handleInput = (event: Event) => emit('update:value', (<HTMLInputElement>event.target).value)
 </script>
 
 <template>
   <textarea
-    :value="value"
+    v-model="currentValue"
     :rows="rows"
     class="
       w-full
