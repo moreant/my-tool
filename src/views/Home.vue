@@ -37,7 +37,7 @@
       <div class="lg:flex lg:items-center lg:justify-between">
         <h2 class="text-3xl tracking-wide text-white sm:text-4xl">
           <span class="block mb-1">使用工具何必那么复杂，</span>
-          <span class="block text-blue-300">自动焦点、饱和转化、实时生成、快速复制。</span>
+          <span class="block text-blue-300">饱和转换、实时生成、快速复制。</span>
         </h2>
       </div>
     </Container>

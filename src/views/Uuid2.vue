@@ -10,23 +10,31 @@
   import ToolDesc from '@/components/tool/ToolDesc.vue'
   import Button from '@/components/Button.vue'
   import Textarea from '@/components/input/Textarea.vue'
-  import { RefreshIcon, DuplicateIcon } from '@heroicons/vue/outline'
+  import { RefreshIcon, DuplicateIcon, CheckIcon } from '@heroicons/vue/outline'
 
   const generateUUID = (count: number) => {
     return count > 0
-      ? new Array(count)
+      ? Array(count)
           .fill(0)
           .map(() => uuidv4())
           .join('\n')
       : ''
   }
 
-  const copyToClipboard = (count: number) => {
-    copy(generateUUID(count))
-  }
-
   const count = ref(10)
+  const copyItem = ref([1, 5, 10, 50, 100, 500])
+  const copyOk = ref(Array(copyItem.value.length).fill(0))
   const uuidStr = ref(generateUUID(count.value))
+
+  const copyToClipboard = (count: number, index: number) => {
+    const success = copy(generateUUID(count))
+    if (success) {
+      copyOk.value[index] = 1
+      setTimeout(() => {
+        copyOk.value[index] = 0
+      }, 300)
+    }
+  }
 
   const refresh = () => {
     uuidStr.value = generateUUID(count.value)
@@ -51,7 +59,7 @@
         <ColumnLabel text="快速复制" />
         <div className="grid grid-cols-2 gap-5">
           <button
-            v-for="item in [1, 5, 10, 50, 100, 500]"
+            v-for="(item, index) in copyItem"
             class="
               flex
               justify-center
@@ -76,10 +84,15 @@
               duration-200
               bg-white
             "
-            @click="copyToClipboard(item)"
+            @click="copyToClipboard(item, index)"
           >
-            <span class="text-gray-900">{{ item }} 个 </span>
-            <DuplicateIcon class="w-5 h-5" />
+            <template v-if="copyOk[index] === 1">
+              <CheckIcon class="text-green-400 w-5 h-5" />
+            </template>
+            <template v-else>
+              <span class="text-gray-900">{{ item }} 个 </span>
+              <DuplicateIcon class="w-5 h-5" />
+            </template>
           </button>
         </div>
       </div>
