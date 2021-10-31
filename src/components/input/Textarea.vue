@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { ref, watchEffect } from 'vue'
+  import { watchEffect } from 'vue'
 
   const props = defineProps<{
     value?: string
@@ -8,16 +8,15 @@
 
   const emit = defineEmits(['update:value'])
 
-  const currentValue = ref(props.value)
+  watchEffect(() => emit('update:value', props.value))
 
-  watchEffect(() => emit('update:value', currentValue.value))
   // 亦可这样
   // const handleInput = (event: Event) => emit('update:value', (<HTMLInputElement>event.target).value)
 </script>
 
 <template>
   <textarea
-    v-model="currentValue"
+    v-model="value"
     :rows="rows"
     class="
       w-full

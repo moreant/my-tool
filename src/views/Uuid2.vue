@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+  import { ref, watch } from 'vue'
+  import { v4 as uuidv4 } from 'uuid'
+  import copy from 'copy-to-clipboard'
+
   import Navbar from '@/components/Navbar.vue'
   import Container from '@/components/Container.vue'
   import ColumnLabel from '@/components/ColumnLabel.vue'
@@ -7,6 +11,30 @@
   import Button from '@/components/Button.vue'
   import Textarea from '@/components/input/Textarea.vue'
   import { RefreshIcon, DuplicateIcon } from '@heroicons/vue/outline'
+
+  const generateUUID = (count: number) => {
+    return count > 0
+      ? new Array(count)
+          .fill(0)
+          .map(() => uuidv4())
+          .join('\n')
+      : ''
+  }
+
+  const copyToClipboard = (count: number) => {
+    copy(generateUUID(count))
+  }
+
+  const count = ref(10)
+  const uuidStr = ref(generateUUID(count.value))
+
+  const refresh = () => {
+    uuidStr.value = generateUUID(count.value)
+  }
+
+  watch(count, (val) => {
+    uuidStr.value = generateUUID(val)
+  })
 </script>
 
 <template>
@@ -48,6 +76,7 @@
               duration-200
               bg-white
             "
+            @click="copyToClipboard(item)"
           >
             <span class="text-gray-900">{{ item }} 个 </span>
             <DuplicateIcon class="w-5 h-5" />
@@ -59,6 +88,7 @@
         <div class="flex flex-wrap mb-4">
           <div class="relative">
             <input
+              v-model="count"
               type="number"
               class="
                 w-32
@@ -72,12 +102,12 @@
               placeholder=""
             />
           </div>
-          <Button class="ml-2">
+          <Button class="ml-2" @click="refresh">
             <RefreshIcon class="h-4 w-4 mr-1" />
             刷 新</Button
           >
         </div>
-        <Textarea rows="11" />
+        <Textarea v-model:value="uuidStr" rows="11" />
       </div>
     </div>
   </Container>
