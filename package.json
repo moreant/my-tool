@@ -13,7 +13,8 @@
     "copy-to-clipboard": "^3.3.1",
     "uuid": "^8.3.2",
     "vue": "^3.2.16",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vue-tsc": "^0.28.10"
   },
   "devDependencies": {
     "@types/node": "^16.11.1",
@@ -23,7 +24,6 @@
     "postcss": "^8.3.9",
     "tailwindcss": "^2.2.17",
     "typescript": "^4.4.3",
-    "vite": "^2.6.4",
-    "vue-tsc": "^0.3.0"
+    "vite": "^2.6.4"
   }
 }
