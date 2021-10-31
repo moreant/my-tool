@@ -33,9 +33,9 @@
   <Container>
     <div class="mb-2">
       <ToolHead title="命名类型转换" subtitle="" mdSubtitle="" />
-      <!-- <Radio name="upper">无控制</Radio>
+      <Radio name="upper">无控制</Radio>
       <Radio name="upper">全部大写</Radio>
-      <Radio name="upper">全部小写</Radio> -->
+      <Radio name="upper">全部小写</Radio>
     </div>
     <div class="grid grid-cols-4 space-x-4">
       <div class="mb-2">
