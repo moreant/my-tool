@@ -9,7 +9,7 @@
   import ToolHead from '@/components/tool/ToolHead.vue'
   import ToolDesc from '@/components/tool/ToolDesc.vue'
   import Button from '@/components/Button.vue'
-  import Textarea from '@/components/input/Textarea.vue'
+  import Textarea from '@/components/form/Textarea.vue'
   import { RefreshIcon, DuplicateIcon, CheckIcon } from '@heroicons/vue/outline'
 
   const generateUUID = (count: number) => {

@@ -7,7 +7,8 @@
   import ToolDesc from '@/components/tool/ToolDesc.vue'
   import ToolHead from '@/components/tool/ToolHead.vue'
   import ColumnLabel from '@/components/ColumnLabel.vue'
-  import Textarea from '@/components/input/Textarea.vue'
+  import Textarea from '@/components/form/Textarea.vue'
+  import Radio from '@/components/form/Radio.vue'
 
   const input = reactive({
     input: '',
@@ -30,7 +31,12 @@
 <template>
   <Navbar />
   <Container>
-    <ToolHead title="命名类型转换" subtitle="" mdSubtitle="" />
+    <div class="mb-2">
+      <ToolHead title="命名类型转换" subtitle="" mdSubtitle="" />
+      <!-- <Radio name="upper">无控制</Radio>
+      <Radio name="upper">全部大写</Radio>
+      <Radio name="upper">全部小写</Radio> -->
+    </div>
     <div class="grid grid-cols-4 space-x-4">
       <div class="mb-2">
         <ColumnLabel text="输入" />

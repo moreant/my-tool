@@ -3,7 +3,7 @@
   import Navbar from '@/components/Navbar.vue'
   import Container from '@/components/Container.vue'
   import ToolHead from '@/components/tool/ToolHead.vue'
-  import Textarea from '@/components/input/Textarea.vue'
+  import Textarea from '@/components/form/Textarea.vue'
 
   const exampleJson = [
     {
