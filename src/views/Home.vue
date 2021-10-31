@@ -12,8 +12,8 @@
       href: '/base64'
     },
     {
-      text: '驼峰蛇形',
-      href: '/camel'
+      text: '命名类型',
+      href: '/case'
     },
     {
       text: 'Crontab',
