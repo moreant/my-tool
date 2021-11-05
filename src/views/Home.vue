@@ -19,12 +19,13 @@
       text: 'Crontab',
       href: '/crontab'
     },
-     {
+    {
       text: 'Kv2Note',
       href: '/kv2note'
     },
     {
       text: '正则表达式',
+      target: '_blank',
       href: 'https://regex101.com/'
     }
   ]
@@ -45,30 +46,10 @@
   <Container>
     <ul class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 text-center">
       <li v-for="item in itemList" class="flex min-w-full">
-        <router-link
-          class="
-            group
-            text=xl
-            md:text-2xl
-            tracking-wider
-            text-gray-900
-            font-bold
-            relative
-            rounded-xl
-            border border-gray-400 border-opacity-30
-            transition-all
-            duration-100
-            ease-in-out
-            hover:shadow-xl hover:bg-blue-500 hover:text-white
-            w-full
-            md:w-full
-            p-6
-            md:p-12
-            bg-white
-            2xl:py-14 2xl:text-3xl
-          "
-          :to="item.href"
-        >
+        <a v-if="item.target === '_blank'" :href="item.href" target="_blank" class="home-item">
+          {{ item.text }}
+        </a>
+        <router-link v-else :to="item.href" class="home-item">
           {{ item.text }}
         </router-link>
       </li>
