@@ -47,7 +47,7 @@
   <Navbar />
   <Container>
     <ToolHead title="Kv2Note" subtitle="将 KV 格式的 Json 数组转为单行注释" />
-    <Textarea v-model:value="inputValue" rows="10" />
+    <Textarea v-model="inputValue" rows="10" />
     {{ result }}
   </Container>
 </template>

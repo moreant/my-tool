@@ -40,19 +40,19 @@
     <div class="grid grid-cols-4 space-x-4">
       <div class="mb-2">
         <ColumnLabel text="输入" />
-        <Textarea v-model:value="input.input" rows="11" />
+        <Textarea v-model="input.input" rows="11" />
       </div>
       <div>
         <ColumnLabel text="驼峰命名" />
-        <Textarea v-model:value="input.camelCase" rows="11" />
+        <Textarea v-model="input.camelCase" rows="11" />
       </div>
       <div>
         <ColumnLabel text="snake case" />
-        <Textarea v-model:value="input.snakeCase" rows="11" />
+        <Textarea v-model="input.snakeCase" rows="11" />
       </div>
       <div>
         <ColumnLabel text="kebab case" />
-        <Textarea v-model:value="input.kebabCase" rows="11" />
+        <Textarea v-model="input.kebabCase" rows="11" />
       </div>
     </div>
   </Container>
