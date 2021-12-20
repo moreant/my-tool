@@ -6,7 +6,8 @@ const routes = [
   { path: '/case', component: () => import('@/views/Case.vue') },
   { path: '/kv2note', component: () => import('@/views/Kv2Note.vue') },
   { path: '/base64', component: () => import('@/views/Base64.vue') },
-  { path: '/crontab', component: () => import('@/views/Crontab.vue') }
+  { path: '/crontab', component: () => import('@/views/Crontab.vue') },
+  { path: '/trim', component: () => import('@/views/Trim.vue') }
 ]
 
 const router = createRouter({

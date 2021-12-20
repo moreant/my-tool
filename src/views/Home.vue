@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import Navbar from '@/components/Navbar.vue'
   import Container from '@/components/Container.vue'
+  import { ExternalLinkIcon } from '@heroicons/vue/solid'
 
   const itemList = [
     {
@@ -22,6 +23,10 @@
     {
       text: 'Kv2Note',
       href: '/kv2note'
+    },
+    {
+      text: 'Trim',
+      href: '/trim'
     },
     {
       text: '正则表达式',
@@ -51,7 +56,7 @@
         <ul class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 text-center">
           <li v-for="item in itemList" class="flex min-w-full">
             <a v-if="item.target === '_blank'" :href="item.href" target="_blank" class="home-item">
-              {{ item.text }}
+              {{ item.text }}<ExternalLinkIcon class="w-6 h-6 inline" />
             </a>
             <router-link v-else :to="item.href" class="home-item">
               {{ item.text }}
