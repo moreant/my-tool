@@ -13,8 +13,8 @@ export default defineConfig({
         name: 'Devify - tools for web developers',
         short_name: 'Devify',
         description: 'tools for web developers',
-        theme_color: '#fff',
-        background_color: "#B12A34",
+        theme_color: '#2563eb',
+        background_color: "#2563eb",
         icons: [
           {
             src: '/pwa-192x192.png',
