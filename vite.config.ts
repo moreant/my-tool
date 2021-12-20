@@ -8,11 +8,14 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'sw.ts',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Name of your app',
-        short_name: 'Short name of your app',
-        description: 'Description of your app',
+        name: 'Devify - tools for web developers',
+        short_name: 'Devify',
+        description: 'tools for web developers',
         theme_color: '#ffffff',
         icons: [
           {
