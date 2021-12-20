@@ -6,14 +6,16 @@
   height: 100vh;
 }
 
-.simple-input {
-  @apply border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 rounded-md;
-}
+@layer components {
+  .simple-input {
+    @apply border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 rounded-md;
+  }
 
-.simple-radio {
-  @apply rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50;
-}
+  .simple-radio {
+    @apply rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50;
+  }
 
-.home-item {
-  @apply group md:text-2xl tracking-wider text-gray-900 font-bold relative rounded-xl border border-gray-400 border-opacity-30 transition-all duration-100 ease-in-out hover:shadow-xl hover:bg-blue-500 hover:text-white w-full md:w-full p-6 md:p-12 bg-white 2xl:py-14 2xl:text-3xl;
+  .home-item {
+    @apply md:text-2xl tracking-wider text-gray-900 font-bold relative rounded-xl border border-gray-400 border-opacity-30 transition-all duration-100 ease-in-out hover:shadow-xl hover:bg-blue-500 hover:text-white w-full md:w-full p-6 md:p-12 bg-white 2xl:py-14 2xl:text-3xl;
+  }
 }
