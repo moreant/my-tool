@@ -1,10 +1,9 @@
 <script setup lang="ts">
-  import { ref, reactive, watch } from 'vue'
+  import { reactive, watch } from 'vue'
   import _ from 'lodash'
 
   import Navbar from '@/components/Navbar.vue'
   import Container from '@/components/Container.vue'
-  import ToolDesc from '@/components/tool/ToolDesc.vue'
   import ToolHead from '@/components/tool/ToolHead.vue'
   import ColumnLabel from '@/components/ColumnLabel.vue'
   import Textarea from '@/components/form/Textarea.vue'
