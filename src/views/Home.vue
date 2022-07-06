@@ -35,7 +35,7 @@
     }
   ]
 
-  const origin = location.origin.indexOf('devify') > 0
+  const origin = location.origin.includes('devify') || location.origin.includes("tptp") || location.origin.includes("yeek")
 </script>
 
 <template>
