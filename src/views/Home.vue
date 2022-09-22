@@ -35,7 +35,8 @@
     }
   ]
 
-  const origin = location.origin.includes('devify') || location.origin.includes("tptp") || location.origin.includes("yeek")
+  const origin = ['yeek','devify','tptp'].findIndex(i=>location.origin.includes(i)))
+  
 </script>
 
 <template>
@@ -65,8 +66,8 @@
         </ul>
       </Container>
     </div>
-    <div v-if="origin" class="text-center mb-4 text-gray-400">
-      <a href="https://beian.miit.gov.cn" class="hover:text-gray-900">粤ICP备2021109792号</a>
+    <div v-if="origin >-1 " class="text-center mb-4 text-gray-400">
+      <a href="https://beian.miit.gov.cn" class="hover:text-gray-900">粤ICP备2021109792-{origin+1}号</a>
     </div>
   </div>
 </template>
