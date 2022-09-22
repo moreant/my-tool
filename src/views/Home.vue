@@ -67,7 +67,7 @@
       </Container>
     </div>
     <div v-if="origin > -1" class="text-center mb-4 text-gray-400">
-      <a href="https://beian.miit.gov.cn" class="hover:text-gray-900">粤ICP备2021109792-{origin+1}号</a>
+      <a href="https://beian.miit.gov.cn" class="hover:text-gray-900">粤ICP备2021109792-{{origin+1}}号</a>
     </div>
   </div>
 </template>
